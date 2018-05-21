@@ -40,7 +40,8 @@ initial
 				end
 			
 		case (state)
-			0:	begin				//state 0
+			0:	begin					//state 0
+				
 				if( trend == 1)
 					begin
 						state = 1;
@@ -49,6 +50,7 @@ initial
 			1:						//state 1				
 				if(trend == 2)
 					begin
+						sayac = 0;
 						state = 2;
 					end
 			2:begin				//state 2
@@ -77,10 +79,9 @@ initial
 				end
 				
 		endcase
-		if (trend == 0)
+			if (trend == 0 && state == 0)
 					begin
 						sayac = sayac + 1;
-						state = 0;
 					end	
 		if( set == 1)							//set
 			begin
