@@ -8,13 +8,12 @@ input clk;
 
  reg [2:0] trend;
  reg [2:0] state;
- integer sayac;
+ integer sayac;			// The counter which is adjusted to reset measurements periodically. It is small or simulation.
 integer set;
 
 output reg [11:0] amp;
 output reg [11:0] mean;
 
-parameter clk_freq = 1000000;
 initial
 	begin
 		maks =0;
